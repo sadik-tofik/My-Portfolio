@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive 3D Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav__container">
+            <div class="nav__logo">
+                <span class="nav__logo-text">Portfolio</span>
+            </div>
+            <ul class="nav__list">
+                <li class="nav__item"><a href="#hero" class="nav__link">Home</a></li>
+                <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
+                <li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
+                <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+            </ul>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                <span class="theme-toggle__icon">🌙</span>
+            </button>
+            <button class="nav__toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Particle Background Canvas -->
+    <canvas id="particleCanvas" class="particle-canvas"></canvas>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero__container">
+            <div class="hero__content">
+                <div class="hero__avatar-container">
+                    <div class="hero__avatar">
+                        <div class="hero__avatar-inner">
+                            <div class="hero__avatar-face hero__avatar-face--front">
+                                <div class="hero__avatar-img"></div>
+                            </div>
+                            <div class="hero__avatar-face hero__avatar-face--back">
+                                <div class="hero__avatar-pattern"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero__text">
+                    <h1 class="hero__title">
+                        <span class="hero__greeting">console.log("Hello World! I'm")</span>
+                        <span class="hero__name">Sadik Tofik</span>
+                    </h1>
+                    <div class="hero__subtitle">
+                        <span class="hero__typing" id="typingText"></span>
+                        <span class="hero__cursor">|</span>
+                    </div>
+                    <p class="hero__description">
+                        Computer Science student at Jimma University building practical solutions with JavaScript, Python, and blockchain technologies. Ready to hack the future!
+                    </p>
+                    <div class="hero__cta">
+                        <a href="#projects" class="btn btn--primary">View My Work</a>
+                        <a href="#contact" class="btn btn--secondary">Get In Touch</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero__scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="skills__container">
+            <h2 class="section-title">Skills & Expertise</h2>
+            <div class="skills__grid">
+                <div class="skills__category">
+                    <h3 class="skills__category-title">Technical Skills</h3>
+                    <div class="skills__progress-bars">
+                        <div class="skill-bar" data-skill="90">
+                            <div class="skill-bar__label">JavaScript</div>
+                            <div class="skill-bar__track">
+                                <div class="skill-bar__fill"></div>
+                            </div>
+                            <div class="skill-bar__percentage">90%</div>
+                        </div>
+                        <div class="skill-bar" data-skill="85">
+                            <div class="skill-bar__label">Python</div>
+                            <div class="skill-bar__track">
+                                <div class="skill-bar__fill"></div>
+                            </div>
+                            <div class="skill-bar__percentage">85%</div>
+                        </div>
+                        <div class="skill-bar" data-skill="88">
+                            <div class="skill-bar__label">Next.js</div>
+                            <div class="skill-bar__track">
+                                <div class="skill-bar__fill"></div>
+                            </div>
+                            <div class="skill-bar__percentage">88%</div>
+                        </div>
+                        <div class="skill-bar" data-skill="82">
+                            <div class="skill-bar__label">Blockchain</div>
+                            <div class="skill-bar__track">
+                                <div class="skill-bar__fill"></div>
+                            </div>
+                            <div class="skill-bar__percentage">82%</div>
+                        </div>
+                        <div class="skill-bar" data-skill="80">
+                            <div class="skill-bar__label">AI/ML</div>
+                            <div class="skill-bar__track">
+                                <div class="skill-bar__fill"></div>
+                            </div>
+                            <div class="skill-bar__percentage">80%</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skills__bubbles">
+                    <div class="skill-bubble" data-skill="Full-Stack Development">
+                        <div class="skill-bubble__content">
+                            <span class="skill-bubble__icon">💻</span>
+                            <span class="skill-bubble__text">Full-Stack</span>
+                        </div>
+                    </div>
+                    <div class="skill-bubble" data-skill="Blockchain Development">
+                        <div class="skill-bubble__content">
+                            <span class="skill-bubble__icon">⛓️</span>
+                            <span class="skill-bubble__text">Blockchain</span>
+                        </div>
+                    </div>
+                    <div class="skill-bubble" data-skill="AI & Machine Learning">
+                        <div class="skill-bubble__content">
+                            <span class="skill-bubble__icon">🤖</span>
+                            <span class="skill-bubble__text">AI/ML</span>
+                        </div>
+                    </div>
+                    <div class="skill-bubble" data-skill="Database Management">
+                        <div class="skill-bubble__content">
+                            <span class="skill-bubble__icon">🗄️</span>
+                            <span class="skill-bubble__text">Database</span>
+                        </div>
+                    </div>
+                    <div class="skill-bubble" data-skill="Natural Language Processing">
+                        <div class="skill-bubble__content">
+                            <span class="skill-bubble__icon">🧠</span>
+                            <span class="skill-bubble__text">NLP</span>
+                        </div>
+                    </div>
+                    <div class="skill-bubble" data-skill="Web Development">
+                        <div class="skill-bubble__content">
+                            <span class="skill-bubble__icon">🌐</span>
+                            <span class="skill-bubble__text">Web Dev</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="projects__container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects__grid">
+                <article class="project-card" data-tilt>
+                    <div class="project-card__inner">
+                        <div class="project-card__front">
+                            <div class="project-card__image">
+                                <img src="https://images.pexels.com/photos/5380664/pexels-photo-5380664.jpeg?auto=compress&cs=tinysrgb&w=800" alt="MediChain - Blockchain Drug Verification" loading="lazy">
+                            </div>
+                            <div class="project-card__content">
+                                <h3 class="project-card__title">MediChain</h3>
+                                <p class="project-card__description">Blockchain drug verification system</p>
+                                <div class="project-card__tech">
+                                    <span class="tech-tag">Next.js 14</span>
+                                    <span class="tech-tag">Cardano</span>
+                                    <span class="tech-tag">PostgreSQL</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-card__back">
+                            <div class="project-card__details">
+                                <h3 class="project-card__title">MediChain</h3>
+                                <p class="project-card__full-description">
+                                    Cardano blockchain system for pharmaceutical supply chain verification with NFT batch tracking on testnet.
+                                </p>
+                                <ul class="project-card__features">
+                                    <li>QR code drug verification</li>
+                                    <li>Testnet NFT minting</li>
+                                    <li>Analytics dashboard</li>
+                                    <li>Supply chain tracking</li>
+                                </ul>
+                                <div class="project-card__actions">
+                                    <a href="https://project-lemon-five-47.vercel.app/" target="_blank" class="btn btn--small">Live Demo</a>
+                                    <a href="https://github.com/sadik-tofik/medichain" target="_blank" class="btn btn--small btn--secondary">GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card" data-tilt>
+                    <div class="project-card__inner">
+                        <div class="project-card__front">
+                            <div class="project-card__image">
+                                <img src="https://images.pexels.com/photos/4164418/pexels-photo-4164418.jpeg?auto=compress&cs=tinysrgb&w=800" alt="TypeRacer Pro" loading="lazy">
+                            </div>
+                            <div class="project-card__content">
+                                <h3 class="project-card__title">TypeRacer Pro</h3>
+                                <p class="project-card__description">Advanced typing speed test application</p>
+                                <div class="project-card__tech">
+                                    <span class="tech-tag">Next.js</span>
+                                    <span class="tech-tag">PostgreSQL</span>
+                                    <span class="tech-tag">shadcn/ui</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-card__back">
+                            <div class="project-card__details">
+                                <h3 class="project-card__title">TypeRacer Pro</h3>
+                                <p class="project-card__full-description">
+                                    Advanced typing speed test application with performance analytics and real-time feedback.
+                                </p>
+                                <ul class="project-card__features">
+                                    <li>Real-time WPM tracking</li>
+                                    <li>Error highlighting</li>
+                                    <li>Dark mode support</li>
+                                    <li>Performance analytics</li>
+                                </ul>
+                                <div class="project-card__actions">
+                                    <a href="https://type-racer-pro.vercel.app/" target="_blank" class="btn btn--small">Live Demo</a>
+                                    <a href="https://github.com/sadik-tofik/TypeRacer-Pro" target="_blank" class="btn btn--small btn--secondary">GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card" data-tilt>
+                    <div class="project-card__inner">
+                        <div class="project-card__front">
+                            <div class="project-card__image">
+                                <img src="https://images.pexels.com/photos/4164418/pexels-photo-4164418.jpeg?auto=compress&cs=tinysrgb&w=800" alt="NLP Text Preprocessor" loading="lazy">
+                            </div>
+                            <div class="project-card__content">
+                                <h3 class="project-card__title">NLP Text Preprocessor</h3>
+                                <p class="project-card__description">Text cleaning and entity recognition pipeline</p>
+                                <div class="project-card__tech">
+                                    <span class="tech-tag">Python</span>
+                                    <span class="tech-tag">spaCy</span>
+                                    <span class="tech-tag">BERT</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-card__back">
+                            <div class="project-card__details">
+                                <h3 class="project-card__title">NLP Text Preprocessor</h3>
+                                <p class="project-card__full-description">
+                                    Text cleaning and entity recognition pipeline published on ReadyTensor platform.
+                                </p>
+                                <ul class="project-card__features">
+                                    <li>Text preprocessing</li>
+                                    <li>Entity recognition</li>
+                                    <li>BERT integration</li>
+                                    <li>Published research</li>
+                                </ul>
+                                <div class="project-card__actions">
+                                    <a href="https://app.readytensor.ai/publications/basic-concepts-of-nlp-zKOsAjfuKM4m" target="_blank" class="btn btn--small">Publication</a>
+                                    <a href="https://github.com/sadik-tofik/nlp-assignment-sadik" target="_blank" class="btn btn--small btn--secondary">GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card" data-tilt>
+                    <div class="project-card__inner">
+                        <div class="project-card__front">
+                            <div class="project-card__image">
+                                <img src="https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Apple Homepage Clone" loading="lazy">
+                            </div>
+                            <div class="project-card__content">
+                                <h3 class="project-card__title">Apple Homepage Clone</h3>
+                                <p class="project-card__description">Pixel-perfect Apple homepage recreation</p>
+                                <div class="project-card__tech">
+                                    <span class="tech-tag">HTML5</span>
+                                    <span class="tech-tag">CSS3</span>
+                                    <span class="tech-tag">JavaScript</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-card__back">
+                            <div class="project-card__details">
+                                <h3 class="project-card__title">Apple Homepage Clone</h3>
+                                <p class="project-card__full-description">
+                                    Pixel-perfect clone of Apple's homepage using vanilla HTML, CSS, and JavaScript.
+                                </p>
+                                <ul class="project-card__features">
+                                    <li>Responsive design</li>
+                                    <li>Smooth animations</li>
+                                    <li>Interactive elements</li>
+                                    <li>Modern CSS techniques</li>
+                                </ul>
+                                <div class="project-card__actions">
+                                    <a href="https://github.com/sadik-tofik/Apple-s-Home-page-clone" target="_blank" class="btn btn--small">GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card" data-tilt>
+                    <div class="project-card__inner">
+                        <div class="project-card__front">
+                            <div class="project-card__image">
+                                <img src="https://images.pexels.com/photos/1181677/pexels-photo-1181677.jpeg?auto=compress&cs=tinysrgb&w=800" alt="JavaScript Calculator" loading="lazy">
+                            </div>
+                            <div class="project-card__content">
+                                <h3 class="project-card__title">JavaScript Calculator</h3>
+                                <p class="project-card__description">Interactive calculator with theme toggle</p>
+                                <div class="project-card__tech">
+                                    <span class="tech-tag">JavaScript</span>
+                                    <span class="tech-tag">CSS Grid</span>
+                                    <span class="tech-tag">HTML5</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-card__back">
+                            <div class="project-card__details">
+                                <h3 class="project-card__title">JavaScript Calculator</h3>
+                                <p class="project-card__full-description">
+                                    Interactive calculator application with theme toggle and modern design.
+                                </p>
+                                <ul class="project-card__features">
+                                    <li>Theme switching</li>
+                                    <li>CSS Grid layout</li>
+                                    <li>Keyboard support</li>
+                                    <li>Error handling</li>
+                                </ul>
+                                <div class="project-card__actions">
+                                    <a href="https://github.com/sadik-tofik/Calculator-by-JS" target="_blank" class="btn btn--small">GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card" data-tilt>
+                    <div class="project-card__inner">
+                        <div class="project-card__front">
+                            <div class="project-card__image">
+                                <img src="https://images.pexels.com/photos/1591447/pexels-photo-1591447.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Hulu Travel Agency" loading="lazy">
+                            </div>
+                            <div class="project-card__content">
+                                <h3 class="project-card__title">Hulu Travel Agency</h3>
+                                <p class="project-card__description">Full-stack booking platform</p>
+                                <div class="project-card__tech">
+                                    <span class="tech-tag">PHP</span>
+                                    <span class="tech-tag">React</span>
+                                    <span class="tech-tag">MySQL</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-card__back">
+                            <div class="project-card__details">
+                                <h3 class="project-card__title">Hulu Travel Agency</h3>
+                                <p class="project-card__full-description">
+                                    Full-stack travel booking platform with user management and booking system.
+                                </p>
+                                <ul class="project-card__features">
+                                    <li>Booking system</li>
+                                    <li>User authentication</li>
+                                    <li>Payment integration</li>
+                                    <li>Admin dashboard</li>
+                                </ul>
+                                <div class="project-card__actions">
+                                    <a href="https://github.com/sadik-tofik/Group-2" target="_blank" class="btn btn--small">GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="contact__container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact__content">
+                <div class="contact__info">
+                    <div class="contact__info-item">
+                        <span class="contact__icon">📧</span>
+                        <div>
+                            <h3>Email</h3>
+                            <p>sadiktofik168@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact__info-item">
+                        <span class="contact__icon">📱</span>
+                        <div>
+                            <h3>Phone</h3>
+                            <p>+251912985489</p>
+                        </div>
+                    </div>
+                    <div class="contact__info-item">
+                        <span class="contact__icon">💼</span>
+                        <div>
+                            <h3>LinkedIn</h3>
+                            <p>linkedin.com/in/sadik-tofik-40788a31a</p>
+                        </div>
+                    </div>
+                    <div class="contact__info-item">
+                        <span class="contact__icon">🐙</span>
+                        <div>
+                            <h3>GitHub</h3>
+                            <p>github.com/sadik-tofik</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact__form" id="contactForm" novalidate>
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" class="form-input" required>
+                        <label for="name" class="form-label">Your Name</label>
+                        <div class="form-error" id="nameError"></div>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" class="form-input" required>
+                        <label for="email" class="form-label">Your Email</label>
+                        <div class="form-error" id="emailError"></div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="subject" name="subject" class="form-input" required>
+                        <label for="subject" class="form-label">Subject</label>
+                        <div class="form-error" id="subjectError"></div>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" class="form-input form-textarea" required></textarea>
+                        <label for="message" class="form-label">Your Message</label>
+                        <div class="form-error" id="messageError"></div>
+                    </div>
+                    <button type="submit" class="btn btn--primary btn--full">
+                        <span class="btn__text">Send Message</span>
+                        <span class="btn__loading">Sending...</span>
+                    </button>
+                    <div class="form-success" id="formSuccess">
+                        Message sent successfully! I'll get back to you soon.
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox__overlay"></div>
+        <div class="lightbox__content">
+            <button class="lightbox__close" id="lightboxClose">&times;</button>
+            <div class="lightbox__body" id="lightboxBody">
+                <!-- Dynamic content will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__container">
+            <p>&copy; 2025 Sadik Tofik. Built with ❤️ using vanilla web technologies.</p>
+            <div class="footer__social">
+                <a href="https://github.com/sadik-tofik" target="_blank" class="footer__social-link">GitHub</a>
+                <a href="https://linkedin.com/in/sadik-tofik-40788a31a" target="_blank" class="footer__social-link">LinkedIn</a>
+                <a href="mailto:sadiktofik168@gmail.com" class="footer__social-link">Email</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
