@@ -1,6 +1,10 @@
-# Sadik Tofik - Interactive 3D Portfolio Website
+# Sadik Tofik -  Portfolio Website
+
+[![Live Demo](https://img.shields.io/badge/View-Live%20Demo-2563eb?style=for-the-badge&logo=netlify&logoColor=white)](https://delicate-pothos-6198eb.netlify.app/)
 
 A stunning, interactive portfolio website for Sadik Tofik, Full-Stack Developer & AI Enthusiast. Built with pure HTML5, CSS3, and vanilla JavaScript featuring advanced 3D animations, particle backgrounds, and responsive design.
+
+🚀 **Latest Update**: Enhanced with an interactive 3D avatar and dynamic education section!
 
 ## 👨‍💻 About Sadik Tofik
 
@@ -24,11 +28,13 @@ Computer Science student at Jimma University building practical solutions with J
 ## 🚀 Features
 
 ### 🎨 Visual Effects
+- **Interactive 3D Avatar** - Advanced facial expressions with eye-tracking and dynamic smile effects
 - **3D Flipping Project Cards** - Interactive cards with tilt effects and hover animations
 - **Particle Background System** - Dynamic canvas-based particle animation with connection lines
 - **3D Rotating Avatar** - CSS 3D transforms with continuous rotation animation
 - **Parallax Scrolling** - Smooth parallax effects for enhanced depth
 - **Animated Gradients** - Beautiful gradient backgrounds with keyframe animations
+- **Dynamic Education Timeline** - Interactive timeline with smooth animations and hover effects
 
 ### 📱 User Experience
 - **Responsive Design** - Mobile-first approach with breakpoints for all devices
@@ -71,9 +77,16 @@ Computer Science student at Jimma University building practical solutions with J
 ```
 portfolio/
 ├── index.html          # Main HTML structure
-├── styles.css          # Complete CSS styles with BEM methodology
-├── script.js           # All JavaScript functionality
-└── README.md           # This documentation
+├── styles/             
+│   └── styles.css      # Complete CSS styles with BEM methodology
+├── js/
+│   ├── main.js        # Core JavaScript functionality
+│   └──  cursor.js      # Interactive avatar and cursor effects
+├── assets/
+│   └── cv/            # CV and resume files
+├── public/
+│   ├── assets/        # Project images and icons
+└── README.md          # Project documentation
 ```
 
 ## 🎯 Key Sections
@@ -131,13 +144,22 @@ portfolio/
 
 ## 🚀 Getting Started
 
-1. **Clone or download** the project files
+### Option 1: View Live Demo
+Visit the deployed version: [https://delicate-pothos-6198eb.netlify.app/](https://delicate-pothos-6198eb.netlify.app/)
+
+### Option 2: Run Locally
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/sadik-tofik/My-Portfolio.git
+   cd My-Portfolio
+   ```
+
 2. **Open `index.html`** in a modern web browser
-3. **Customize** the content:
-   - Replace placeholder images with your own
-   - Update personal information
-   - Modify project details
-   - Adjust color scheme in CSS variables
+   ```bash
+   # Using Python (if installed)
+   python -m http.server 8000
+   # Then open http://localhost:8000 in your browser
+   ```
 
 ## ⚙️ Customization
 
@@ -152,7 +174,7 @@ Update CSS custom properties in `:root`:
 ```
 
 ### Adding Projects
-Add new project cards in the projects section and update the lightbox data in `script.js`:
+Add new project cards in the projects section and update the lightbox data in `js/main.js`:
 ```javascript
 const projectData = {
   yourproject: {
@@ -169,34 +191,38 @@ Adjust animation durations and effects in CSS:
 .your-element {
   transition: transform 0.3s ease;
   animation: yourAnimation 2s infinite;
-}- Images are loaded from Pexels CDN for fast loading
+}
 ```
 
-## 🌟 Performance Tips
+## 🎯 Latest Features
 
-- CSS animations use `transform` and `opacity` for hardware acceleration
-- Intersection Observer reduces unnecessary calculations
-- Debounced scroll events prevent performance issues
+### Interactive Avatar
+- **Eye Tracking**: Follows cursor movement with natural eye movements
+- **Dynamic Expressions**: Smile intensity changes based on cursor proximity
+- **Subtle Animations**: Natural blinking and micro-expressions
+- **Responsive Design**: Works seamlessly across all device sizes
 
-## 🔧 Browser Support
+### Enhanced Education Section
+- **Interactive Timeline**: Beautifully animated education history
+- **Coursework Display**: Detailed view of relevant courses
+- **Achievements Highlight**: Academic accomplishments with visual indicators
+- **Responsive Layout**: Adapts to all screen sizes
 
-- Chrome 60+
-- Firefox 55+
-- Safari 12+
-- Edge 79+
+## 🚀 Deployment
 
-## 📄 License
+This portfolio is deployed on Netlify with continuous deployment from the main branch. Any push to the main branch will automatically trigger a new deployment.
 
-This project is open source and available under the [MIT License](LICENSE).
+[![Netlify Status](https://api.netlify.com/api/v1/badges/your-deploy-id/deploy-status)](https://app.netlify.com/sites/delicate-pothos-6198eb/deploys)
 
-## 🤝 Contributing
+## 📞 Contact
 
-Feel free to fork this project and customize it for your own portfolio. If you create interesting improvements, consider sharing them!
+For inquiries or collaboration opportunities, feel free to reach out:
 
-## 📞 Support
-
-If you have questions or need help customizing the portfolio, feel free to reach out or create an issue in the repository.
+- 🌐 [Portfolio Website](https://delicate-pothos-6198eb.netlify.app/)
+- 📧 Email: sadiktofik168@gmail.com
+- 💼 LinkedIn: [linkedin.com/in/sadik-tofik](https://linkedin.com/in/sadik-tofik-40788a31a)
+- 💻 GitHub: [github.com/sadik-tofik](https://github.com/sadik-tofik)
+- 🐦 Twitter: [@sadiktofik](https://twitter.com/sadiktofik)
 
 ---
 
-**Built with ❤️ using vanilla web technologies**
