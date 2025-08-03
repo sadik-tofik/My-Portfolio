@@ -1,4 +1,4 @@
-# Sadik Tofik -  Portfolio Website
+# Sadik Tofik - Portfolio Website
 
 [![Live Demo](https://img.shields.io/badge/View-Live%20Demo-2563eb?style=for-the-badge&logo=netlify&logoColor=white)](https://sadik-tofik-portfolio.netlify.app/)
 
@@ -11,6 +11,7 @@ A stunning, interactive portfolio website for Sadik Tofik, Full-Stack Developer 
 Computer Science student at Jimma University building practical solutions with JavaScript, Python, and blockchain technologies. Specializing in full-stack development, AI/ML, and blockchain applications.
 
 ### 🛠️ Tech Stack
+
 - **Languages**: JavaScript, Python, PHP, HTML/CSS, SQL
 - **Frameworks**: Next.js, React, Django, Prisma
 - **Blockchain**: Cardano, Smart Contracts
@@ -28,6 +29,7 @@ Computer Science student at Jimma University building practical solutions with J
 ## 🚀 Features
 
 ### 🎨 Visual Effects
+
 - **Interactive 3D Avatar** - Advanced facial expressions with eye-tracking and dynamic smile effects
 - **3D Flipping Project Cards** - Interactive cards with tilt effects and hover animations
 - **Particle Background System** - Dynamic canvas-based particle animation with connection lines
@@ -37,6 +39,7 @@ Computer Science student at Jimma University building practical solutions with J
 - **Dynamic Education Timeline** - Interactive timeline with smooth animations and hover effects
 
 ### 📱 User Experience
+
 - **Responsive Design** - Mobile-first approach with breakpoints for all devices
 - **Smooth Scrolling** - Native smooth scroll with active navigation highlighting
 - **Dark/Light Theme Toggle** - Seamless theme switching with localStorage persistence
@@ -44,6 +47,7 @@ Computer Science student at Jimma University building practical solutions with J
 - **Scroll-triggered Animations** - Elements animate into view using Intersection Observer API
 
 ### 🔧 Interactive Elements
+
 - **Radial Progress Bars** - Animated skill bars with shimmer effects
 - **Interactive Skill Bubbles** - Expandable bubbles with 3D hover effects
 - **Lightbox Gallery** - Modal gallery for project details with smooth animations
@@ -51,6 +55,7 @@ Computer Science student at Jimma University building practical solutions with J
 - **Form Validation** - Real-time validation with animated error feedback
 
 ### ⚡ Performance
+
 - **Optimized Animations** - Hardware-accelerated CSS animations and transforms
 - **Debounced Scroll Events** - Performance-optimized scroll handling
 - **Lazy Loading** - Images load only when needed
@@ -77,7 +82,7 @@ Computer Science student at Jimma University building practical solutions with J
 ```
 portfolio/
 ├── index.html          # Main HTML structure
-├── styles/             
+├── styles/
 │   └── styles.css      # Complete CSS styles with BEM methodology
 ├── js/
 │   ├── main.js        # Core JavaScript functionality
@@ -92,24 +97,28 @@ portfolio/
 ## 🎯 Key Sections
 
 ### Hero Section
+
 - Animated typing effect cycling through different roles
 - 3D rotating avatar with dual-face animation
 - Gradient background with animated grain texture
 - Call-to-action buttons with hover effects
 
 ### Skills Section
+
 - Animated progress bars with percentage indicators
 - Interactive skill bubbles with 3D hover effects
 - Responsive grid layout
 - Scroll-triggered animations
 
 ### Projects Section
+
 - 3D flipping cards with tilt interaction
 - Project galleries with lightbox functionality
 - Technology tags with gradient styling
 - Detailed project information in modal
 
 ### Contact Section
+
 - Floating label form inputs
 - Real-time form validation
 - Animated success/error feedback
@@ -118,6 +127,7 @@ portfolio/
 ## 🎨 Design System
 
 ### Color Palette
+
 - **Primary**: #3b82f6 (Blue)
 - **Secondary**: #10b981 (Emerald)
 - **Accent**: #f59e0b (Amber)
@@ -126,11 +136,13 @@ portfolio/
 - **Error**: #dc2626
 
 ### Typography
+
 - **Font Family**: Inter, system fonts
 - **Font Weights**: 400, 500, 600, 700
 - **Scale**: Responsive typography with CSS clamp()
 
 ### Spacing System
+
 - Based on 8px grid system
 - CSS custom properties for consistent spacing
 - Responsive spacing adjustments
@@ -145,10 +157,13 @@ portfolio/
 ## 🚀 Getting Started
 
 ### Option 1: View Live Demo
+
 Visit the deployed version: [https://delicate-pothos-6198eb.netlify.app/](https://sadik-tofik-portfolio.netlify.app/)
 
 ### Option 2: Run Locally
+
 1. **Clone the repository**
+
    ```bash
    git clone https://github.com/sadik-tofik/My-Portfolio.git
    cd My-Portfolio
@@ -164,7 +179,9 @@ Visit the deployed version: [https://delicate-pothos-6198eb.netlify.app/](https:
 ## ⚙️ Customization
 
 ### Changing Colors
+
 Update CSS custom properties in `:root`:
+
 ```css
 :root {
   --color-primary: #your-color;
@@ -174,19 +191,23 @@ Update CSS custom properties in `:root`:
 ```
 
 ### Adding Projects
+
 Add new project cards in the projects section and update the lightbox data in `js/main.js`:
+
 ```javascript
 const projectData = {
   yourproject: {
-    title: 'Your Project',
-    description: 'Project description',
+    title: "Your Project",
+    description: "Project description",
     // ... other properties
-  }
+  },
 };
 ```
 
 ### Modifying Animations
+
 Adjust animation durations and effects in CSS:
+
 ```css
 .your-element {
   transition: transform 0.3s ease;
@@ -197,12 +218,14 @@ Adjust animation durations and effects in CSS:
 ## 🎯 Latest Features
 
 ### Interactive Avatar
+
 - **Eye Tracking**: Follows cursor movement with natural eye movements
 - **Dynamic Expressions**: Smile intensity changes based on cursor proximity
 - **Subtle Animations**: Natural blinking and micro-expressions
 - **Responsive Design**: Works seamlessly across all device sizes
 
 ### Enhanced Education Section
+
 - **Interactive Timeline**: Beautifully animated education history
 - **Coursework Display**: Detailed view of relevant courses
 - **Achievements Highlight**: Academic accomplishments with visual indicators
@@ -212,7 +235,8 @@ Adjust animation durations and effects in CSS:
 
 This portfolio is deployed on Netlify with continuous deployment from the main branch. Any push to the main branch will automatically trigger a new deployment.
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/your-deploy-id/deploy-status)](https://app.netlify.com/sites/sadik-tofik-portfolio.netlif/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/your-deploy-id/deploy-status)](https://app.netlify.com/sites/sadik-tofik-portfolio/deploys)
+
 ## 📞 Contact
 
 For inquiries or collaboration opportunities, feel free to reach out:
@@ -224,4 +248,3 @@ For inquiries or collaboration opportunities, feel free to reach out:
 - 🐦 Twitter: [@sadiktofik](https://twitter.com/sadiktofik)
 
 ---
-
