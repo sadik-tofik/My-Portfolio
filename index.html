@@ -3,7 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Interactive 3D Portfolio</title>
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -51,18 +53,29 @@
     <section id="hero" class="hero">
       <div class="hero__container">
         <div class="hero__content">
-          <div class="hero__avatar-container">
-            <div class="hero__avatar">
-              <div class="hero__avatar-inner">
-                <div class="hero__avatar-face hero__avatar-face--front">
-                  <div class="hero__avatar-img"></div>
-                </div>
-                <div class="hero__avatar-face hero__avatar-face--back">
-                  <div class="hero__avatar-pattern"></div>
+          <div class="hero__grid">
+            <div class="hero__avatar-wrapper">
+              <div class="hero__avatar">
+                <div class="avatar">
+                  <div class="avatar__face">
+                    <div class="avatar__eyes">
+                      <div class="avatar__eye">
+                        <div class="avatar__eyebrow avatar__eyebrow--left"></div>
+                        <div class="avatar__pupil"></div>
+                      </div>
+                      <div class="avatar__eye">
+                        <div class="avatar__eyebrow avatar__eyebrow--right"></div>
+                        <div class="avatar__pupil"></div>
+                      </div>
+                    </div>
+                    <div class="avatar__mouth">
+                      <div class="avatar__smile"></div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
+            <div class="hero__text-wrapper">
           <div class="hero__text">
             <h1 class="hero__title">
               <span class="hero__greeting"
@@ -75,9 +88,8 @@
               <span class="hero__cursor">|</span>
             </div>
             <p class="hero__description">
-              Computer Science student at Jimma University building practical
-              solutions with JavaScript, Typescript, Python, and blockchain
-              technologies. Ready to hack the future!
+              Intern Backend Developer at Efuye Gela | AI/ML Enthusiast | Computer Science Student at Jimma University
+              <br>Building intelligent web applications with JavaScript, Python, and modern frameworks.
             </p>
             <div class="hero__cta">
               <a href="#projects" class="btn btn--primary">View My Work</a>
@@ -91,88 +103,193 @@
       </div>
     </section>
 
+    <!-- About Section -->
+    <section id="about" class="about">
+      <div class="about__container">
+        <div class="about__content">
+          <div class="about__image">
+            <div class="about__image-inner">
+              <img src="public/assets/3.jpg" alt="Sadik Tofik - Full Stack Developer" class="profile-img">
+              <div class="about__image-overlay"></div>
+            </div>
+          </div>
+          <div class="about__text">
+            <h2 class="section-title">About Me</h2>
+            <div class="about__description">
+              <p>I'm a passionate Full-Stack Developer currently working at Efuye Gela, where I build robust web applications using modern technologies. As a Computer Science student at Jimma University, I've developed a strong foundation in both theoretical concepts and practical implementation.</p>
+              <p>My journey in technology took a significant leap when I was in highschool about becoming a hacker, which sparked my interest in software development. Since then, I've specialized in building full-stack applications with a focus on creating intelligent solutions using AI/ML technologies.</p>
+              <p>I'm particularly interested in how technology can be leveraged to solve real-world problems, especially in the African context. My experience ranges from developing web applications to mentoring others in their tech journey.</p>
+            </div>
+            <div class="about__cta">
+              <a href="/assets/cv/sadik-tofik-cv.html" class="btn btn--primary" id="downloadCv" download="Sadik-Tofik-CV">
+                <i class="fas fa-download"></i> Download CV
+              </a>
+              <p class="cv-note">(HTML format - right click and 'Save as' to download)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Skills Section -->
     <section id="skills" class="skills">
-      <div class="skills__container">
-        <h2 class="section-title">Skills & Expertise</h2>
-        <div class="skills__grid">
-          <div class="skills__category">
-            <h3 class="skills__category-title">Technical Skills</h3>
-            <div class="skills__progress-bars">
-              <div class="skill-bar" data-skill="90">
-                <div class="skill-bar__label">JavaScript</div>
-                <div class="skill-bar__track">
-                  <div class="skill-bar__fill"></div>
-                </div>
-                <div class="skill-bar__percentage">90%</div>
+      <div class="container">
+        <h2 class="section-title">Technologies I Work With</h2>
+        <p class="section-subtitle">Technologies I'm proficient in and enjoy working with</p>
+        
+        <div class="skills-category">
+          <h3 class="skills-category__title">Frontend Development</h3>
+          <div class="skills__grid">
+            <div class="skill-card" title="React">
+              <i class="devicon-react-original colored"></i>
+            </div>
+            <div class="skill-card" title="Next.js">
+              <i class="devicon-nextjs-plain colored"></i>
+            </div>
+            <div class="skill-card" title="HTML5">
+              <i class="devicon-html5-plain colored"></i>
+            </div>
+            <div class="skill-card" title="CSS3">
+              <i class="devicon-css3-plain colored"></i>
+            </div>
+            <div class="skill-card" title="JavaScript">
+              <i class="devicon-javascript-plain colored"></i>
+            </div>
+            <div class="skill-card" title="TypeScript">
+              <i class="devicon-typescript-plain colored"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="skills-category">
+          <h3 class="skills-category__title">Backend & Databases</h3>
+          <div class="skills__grid">
+            <div class="skill-card" title="Node.js">
+              <i class="devicon-nodejs-plain colored"></i>
+            </div>
+            <div class="skill-card" title="Express">
+              <i class="devicon-express-original colored"></i>
+            </div>
+            <div class="skill-card" title="Python">
+              <i class="devicon-python-plain colored"></i>
+            </div>
+            <div class="skill-card" title="Django">
+              <i class="devicon-django-plain colored"></i>
+            </div>
+            <div class="skill-card" title="MongoDB">
+              <i class="devicon-mongodb-plain colored"></i>
+            </div>
+            <div class="skill-card" title="PostgreSQL">
+              <i class="devicon-postgresql-plain colored"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="skills-category">
+          <h3 class="skills-category__title">DevOps & Tools</h3>
+          <div class="skills__grid">
+            <div class="skill-card" title="Git">
+              <i class="devicon-git-plain colored"></i>
+            </div>
+            <div class="skill-card" title="Docker">
+              <i class="devicon-docker-plain colored"></i>
+            </div>
+            <div class="skill-card" title="Cardano">
+              <i class="fas fa-link"></i>
+              <span>Cardano</span>
+            </div>
+            <div class="skill-card" title="Java">
+              <i class="devicon-java-plain colored"></i>
+            </div>
+            <div class="skill-card" title="PHP">
+              <i class="devicon-php-plain colored"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education">
+      <div class="container">
+        <h2 class="section-title">Education</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <div class="timeline-date">2023 – 2026 (Expected)</div>
+              <h3>BSc in Computer Science</h3>
+              <p class="timeline-text">Jimma University, Ethiopia <span class="gpa">CGPA: 3.54/4.0</span></p>
+              <div class="coursework">
+                <h4>Relevant Coursework:</h4>
+                <ul>
+                  <li>Machine Learning</li>
+                  <li>Web Programming</li>
+                  <li>Database Systems</li>
+                  <li>Artificial Intelligence</li>
+                  <li>Data Structures & Algorithms</li>
+                </ul>
               </div>
-              <div class="skill-bar" data-skill="85">
-                <div class="skill-bar__label">Python</div>
-                <div class="skill-bar__track">
-                  <div class="skill-bar__fill"></div>
-                </div>
-                <div class="skill-bar__percentage">85%</div>
-              </div>
-              <div class="skill-bar" data-skill="88">
-                <div class="skill-bar__label">Next.js</div>
-                <div class="skill-bar__track">
-                  <div class="skill-bar__fill"></div>
-                </div>
-                <div class="skill-bar__percentage">88%</div>
-              </div>
-              <div class="skill-bar" data-skill="82">
-                <div class="skill-bar__label">Blockchain</div>
-                <div class="skill-bar__track">
-                  <div class="skill-bar__fill"></div>
-                </div>
-                <div class="skill-bar__percentage">82%</div>
-              </div>
-              <div class="skill-bar" data-skill="80">
-                <div class="skill-bar__label">AI/ML</div>
-                <div class="skill-bar__track">
-                  <div class="skill-bar__fill"></div>
-                </div>
-                <div class="skill-bar__percentage">80%</div>
+              <div class="achievements">
+                <h4>Academic Achievements:</h4>
+                <ul>
+                  <li>3rd Place - Jimma AI Hackathon 2025 (M2M AgriTech Platform)</li>
+                  
+                </ul>
               </div>
             </div>
           </div>
-          <div class="skills__bubbles">
-            <div class="skill-bubble" data-skill="Full-Stack Development">
-              <div class="skill-bubble__content">
-                <span class="skill-bubble__icon">💻</span>
-                <span class="skill-bubble__text">Full-Stack</span>
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <div class="timeline-date">2018 - 2020</div>
+              <h3>High School Diploma</h3>
+              <p class="timeline-text">Natural Science Stream</p>
+              <div class="coursework">
+                <h4>Focus Areas:</h4>
+                <ul>
+                  <li>Mathematics </li>
+                  <li>Physics</li>
+                  <li>Chemistry</li>
+                  <li>ICT (Information and Communication Technology)</li>
+                </ul>
               </div>
             </div>
-            <div class="skill-bubble" data-skill="Blockchain Development">
-              <div class="skill-bubble__content">
-                <span class="skill-bubble__icon">⛓️</span>
-                <span class="skill-bubble__text">Blockchain</span>
-              </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interests Section -->
+    <section id="interests" class="interests">
+      <div class="container">
+        <h2 class="section-title">Interests</h2>
+        <div class="interests__grid">
+          <div class="interest-card">
+            <div class="interest-icon">
+              <i class="fas fa-code"></i>
             </div>
-            <div class="skill-bubble" data-skill="AI & Machine Learning">
-              <div class="skill-bubble__content">
-                <span class="skill-bubble__icon">🤖</span>
-                <span class="skill-bubble__text">AI/ML</span>
-              </div>
+            <h3>Open Source</h3>
+            <p>Contributing to open source projects and building tools for the developer community.</p>
+          </div>
+          <div class="interest-card">
+            <div class="interest-icon">
+              <i class="fas fa-robot"></i>
             </div>
-            <div class="skill-bubble" data-skill="Database Management">
-              <div class="skill-bubble__content">
-                <span class="skill-bubble__icon">🗄️</span>
-                <span class="skill-bubble__text">Database</span>
-              </div>
+            <h3>AI & ML</h3>
+            <p>Exploring machine learning models and their applications in solving real-world problems.</p>
+          </div>
+          <div class="interest-card">
+            <div class="interest-icon">
+              <i class="fas fa-link"></i>
             </div>
-            <div class="skill-bubble" data-skill="Natural Language Processing">
-              <div class="skill-bubble__content">
-                <span class="skill-bubble__icon">🧠</span>
-                <span class="skill-bubble__text">NLP</span>
-              </div>
+            <h3>Blockchain</h3>
+            <p>Developing decentralized applications and smart contracts on blockchain platforms.</p>
+          </div>
+          <div class="interest-card">
+            <div class="interest-icon">
+              <i class="fas fa-mobile-alt"></i>
             </div>
-            <div class="skill-bubble" data-skill="Web Development">
-              <div class="skill-bubble__content">
-                <span class="skill-bubble__icon">🌐</span>
-                <span class="skill-bubble__text">Web Dev</span>
-              </div>
-            </div>
+            <h3>Mobile Development</h3>
+            <p>Building cross-platform mobile applications with modern frameworks.</p>
           </div>
         </div>
       </div>
@@ -183,6 +300,52 @@
       <div class="projects__container">
         <h2 class="section-title">Featured Projects</h2>
         <div class="projects__grid">
+          <!-- M2M AgriTech Platform -->
+          <article class="project-card" data-tilt>
+            <div class="project-card__inner">
+              <div class="project-card__front">
+                <div class="project-card__image">
+                  <img
+                    src="https://i.pinimg.com/736x/6d/d7/6c/6dd76c00f65c8a0a6917ab73eb6a32fb.jpg"
+                    alt="M2M AgriTech Platform"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="project-card__content">
+                  <h3 class="project-card__title">M2M AgriTech Platform</h3>
+                  <p class="project-card__description">
+                    Hackathon Project - Farmer-Buyer Matching Concept
+                  </p>
+                  <div class="project-card__tech">
+                    <span class="tech-tag">Concept</span>
+                    <span class="tech-tag">UI/UX</span>
+                    <span class="tech-tag">Frontend</span>
+                    <span class="tech-tag">AI/ML</span>
+                  </div>
+                </div>
+              </div>
+              <div class="project-card__back">
+                <div class="project-card__details">
+                  <h3 class="project-card__title">M2M AgriTech Platform</h3>
+                  <p class="project-card__full-description">
+                    A conceptual platform designed to connect farmers directly with buyers, 
+                    presented at the Jimma AI Hackathon 2024.
+                  </p>
+                  <ul class="project-card__features">
+                    <li>Conceptualized AI-powered farmer-buyer matching system</li>
+                    <li>Developed MVP frontend prototype</li>
+                    <li>Designed user flows for farmers and buyers</li>
+                    <li>3rd Place Winner - Jimma AI Hackathon 2024</li>
+                  </ul>
+                  <div class="project-card__actions">
+                    <span class="project-card__hackathon">
+                      Hackathon Project - No Public Demo Available
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
           <article class="project-card" data-tilt>
             <div class="project-card__inner">
               <div class="project-card__front">
@@ -620,6 +783,7 @@
       </div>
     </footer>
 
+    <script src="js/cursor.js"></script>
     <script src="script.js"></script>
   </body>
 </html>

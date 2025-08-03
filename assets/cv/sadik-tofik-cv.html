@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sadik Tofik - CV</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #1e40af;
+            --text-color: #1f2937;
+            --light-text: #6b7280;
+            --border-color: #e5e7eb;
+            --bg-color: #ffffff;
+            --section-bg: #f9fafb;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            font-size: 16px;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 2px solid var(--primary-color);
+        }
+        .name {
+            color: var(--secondary-color);
+            margin: 0 0 0.5rem 0;
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+        .title {
+            color: var(--light-text);
+            margin: 0.5rem 0 1rem 0;
+            font-size: 1.25rem;
+            font-weight: 400;
+        }
+        .contact-info {
+            margin: 1rem 0 0 0;
+            line-height: 1.8;
+        }
+        
+        .contact-info a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        
+        .contact-info a:hover {
+            color: var(--secondary-color);
+            text-decoration: underline;
+        }
+        section {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: var(--section-bg);
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        }
+        
+        section h2 {
+            color: var(--primary-color);
+            margin-top: 0;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--border-color);
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+        h2 {
+            color: #1e40af;
+            border-bottom: 1px solid #e5e7eb;
+            padding-bottom: 5px;
+        }
+        .experience-item, .education-item {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px dashed var(--border-color);
+        }
+        
+        .experience-item:last-child, 
+        .education-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .job-title, .degree {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin: 0 0 0.25rem 0;
+            color: var(--text-color);
+        }
+        .company, .school {
+            font-weight: 500;
+            color: var(--light-text);
+            margin: 0 0 0.25rem 0;
+        }
+        .date {
+            color: var(--light-text);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 1rem 0;
+        }
+        
+        .skill {
+            background: #e0f2fe;
+            padding: 0.4rem 0.9rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            color: #0369a1;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+        
+        .skill:hover {
+            background: #bae6fd;
+            transform: translateY(-1px);
+        }
+        
+        .project {
+            margin-bottom: 1.5rem;
+            padding: 1.25rem;
+            background: white;
+            border-radius: 6px;
+            border-left: 3px solid var(--primary-color);
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+        }
+        
+        .project-name {
+            font-weight: 600;
+            color: var(--text-color);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+        
+        .project p {
+            margin: 0.5rem 0 0.75rem 0;
+            color: var(--light-text);
+        }
+        
+        .project-links {
+            font-size: 0.9rem;
+        }
+        
+        .project-links a {
+            color: var(--primary-color);
+            text-decoration: none;
+            margin-right: 1rem;
+            transition: color 0.2s;
+        }
+        
+        .project-links a:hover {
+            color: var(--secondary-color);
+            text-decoration: underline;
+        }
+        
+        .certifications ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .certifications li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .certifications li:last-child {
+            border-bottom: none;
+        }
+        
+        .languages p {
+            margin: 0.5rem 0 0 0;
+            color: var(--light-text);
+        }
+        
+        @media print {
+            body {
+                padding: 0.5in;
+                font-size: 11pt;
+            }
+            
+            section {
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
+            
+            .project {
+                page-break-inside: avoid;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem;
+            }
+            
+            .name {
+                font-size: 2rem;
+            }
+            
+            section {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1 class="name">Sadik Tofik</h1>
+        <p class="title">Full-Stack Developer & AI Enthusiast</p>
+        <div class="contact-info">
+            <p>📍 Addis Ababa, Ethiopia | 📧 sadiktofik168@gmail.com | 📞 +251912985489</p>
+            <p>🔗 <a href="https://linkedin.com/in/sadik-tofik-40788a31a" target="_blank">LinkedIn</a> | 
+               <a href="https://github.com/sadik-tofik" target="_blank">GitHub</a></p>
+        </div>
+    </div>
+
+    <section class="summary">
+        <h2>Professional Summary</h2>
+        <p>Computer Science student at Jimma University with full-stack development expertise (PHP, Django, React) and AI/ML specialization. Passionate about building scalable solutions for social impact, particularly in AgriTech and digital literacy. Currently interning as a Backend Web Developer at Efuye Gela.</p>
+    </section>
+
+    <section class="education">
+        <h2>Education</h2>
+        <div class="education-item">
+            <div class="degree">BSc in Computer Science</div>
+            <div class="school">Jimma University</div>
+            <div class="date">2023 – 2026 (Expected) | CGPA: 3.54</div>
+            <p class="coursework">Relevant Coursework: Machine Learning, Web Programming, Database Systems</p>
+        </div>
+    </section>
+
+    <section class="experience">
+        <h2>Experience</h2>
+        
+        <div class="experience-item">
+            <div class="job-title">Backend Web Developer Intern</div>
+            <div class="company">Efuye Gela</div>
+            <div class="date">Current</div>
+            <ul>
+                <li>Developing and maintaining backend services for web applications</li>
+                <li>Implementing RESTful APIs and database solutions</li>
+                <li>Collaborating with the development team on various projects</li>
+            </ul>
+        </div>
+
+        <div class="experience-item">
+            <div class="job-title">Student Participant</div>
+            <div class="company">Ethiopian Coders Initiative</div>
+            <div class="date">2023</div>
+            <ul>
+                <li>Selected as one of 5 million Ethiopian students to participate in the national digital literacy program</li>
+                <li>Completed comprehensive training in programming fundamentals and computer science concepts</li>
+                <li>Developed foundational coding skills through structured curriculum and hands-on projects</li>
+            </ul>
+        </div>
+
+        <div class="experience-item">
+            <div class="job-title">Academic Tutor</div>
+            <div class="company">Self-Employed</div>
+            <div class="date">2022 – Present</div>
+            <ul>
+                <li>Provide academic support to high school students in core subjects including English, Mathematics, Biology, and Chemistry</li>
+                <li>Help students improve study habits and test-taking strategies</li>
+                <li>Assist with homework, exam preparation, and concept clarification</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="skills-section">
+        <h2>Technical Skills</h2>
+        <div class="skills">
+            <span class="skill">JavaScript</span>
+            <span class="skill">TypeScript</span>
+            <span class="skill">React</span>
+            <span class="skill">Next.js</span>
+            <span class="skill">Node.js</span>
+            <span class="skill">Python</span>
+            <span class="skill">Django</span>
+            <span class="skill">PHP</span>
+            <span class="skill">HTML5/CSS3</span>
+            <span class="skill">SQL</span>
+            <span class="skill">Java</span>
+            <span class="skill">MongoDB</span>
+            <span class="skill">PostgreSQL</span>
+            <span class="skill">Git</span>
+            <span class="skill">Docker</span>
+            <span class="skill">AWS</span>
+            <span class="skill">TensorFlow</span>
+            <span class="skill">spaCy</span>
+            <span class="skill">Cardano</span>
+            <span class="skill">Prisma</span>
+        </div>
+    </section>
+
+    <section class="projects">
+        <h2>Projects</h2>
+        
+        <div class="project">
+            <div class="project-name">MediChain (Next.js/Cardano)</div>
+            <p>Blockchain drug verification system with NFT batch tracking</p>
+            <div class="project-links">
+                <a href="https://github.com/sadik-tofik/medichain" target="_blank">GitHub</a> | 
+                <a href="https://project-lemon-five-47.vercel.app/" target="_blank">Live Demo</a>
+            </div>
+        </div>
+
+        <div class="project">
+            <div class="project-name">TypeRacer Pro (Next.js/PostgreSQL)</div>
+            <p>Typing speed test application with analytics dashboard</p>
+            <div class="project-links">
+                <a href="https://github.com/sadik-tofik/TypeRacer-Pro" target="_blank">GitHub</a> | 
+                <a href="https://type-racer-pro.vercel.app/" target="_blank">Live Demo</a>
+            </div>
+        </div>
+
+        <div class="project">
+            <div class="project-name">NLP Text Preprocessor (Python/spaCy)</div>
+            <p>Text cleaning and entity recognition pipeline</p>
+            <div class="project-links">
+                <a href="https://github.com/sadik-tofik/nlp-assignment-sadik" target="_blank">GitHub</a> | 
+                <a href="https://app.readytensor.ai/publications/basic-concepts-of-nlp-zKOsAjfuKM4m" target="_blank">Published on ReadyTensor</a>
+            </div>
+        </div>
+
+        <div class="project">
+            <div class="project-name">M2M AgriTech Platform</div>
+            <p>AI-powered farmer-buyer matching (3rd place, Jimma AI Hackathon)</p>
+        </div>
+    </section>
+
+    <section class="certifications">
+        <h2>Certifications</h2>
+        <ul>
+            <li>Frontier Tech Leaders AI/ML Bootcamp (UNDP) - 2024</li>
+            <li>Machine Learning Specialization - DeepLearning.AI & Stanford University (Coursera) - 2025</li>
+            <li>Python for Everybody Specialization - University of Michigan (Coursera) - 2025</li>
+            <li>AiCE: ALX AI for Career Essentials - 2024</li>
+            <li>Multiple HP LIFE Certifications (Design Thinking, Effective Leadership, etc.)</li>
+        </ul>
+    </section>
+
+    <section class="languages">
+        <h2>Languages</h2>
+        <p>English (Fluent) | Amharic (Native)</p>
+    </section>
+    </section>
+</body>
+</html>
