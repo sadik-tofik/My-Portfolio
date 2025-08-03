@@ -212,13 +212,12 @@ Adjust animation durations and effects in CSS:
 
 This portfolio is deployed on Netlify with continuous deployment from the main branch. Any push to the main branch will automatically trigger a new deployment.
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/your-deploy-id/deploy-status)](https://app.netlify.com/sites/delicate-pothos-6198eb/deploys)
-
+[![Netlify Status](https://api.netlify.com/api/v1/badges/your-deploy-id/deploy-status)](https://app.netlify.com/sites/sadik-tofik-portfolio.netlif/deploys)
 ## 📞 Contact
 
 For inquiries or collaboration opportunities, feel free to reach out:
 
-- 🌐 [Portfolio Website](https://delicate-pothos-6198eb.netlify.app/)
+- 🌐 [Portfolio Website](https://sadik-tofik-portfolio.netlify.app/)
 - 📧 Email: sadiktofik168@gmail.com
 - 💼 LinkedIn: [linkedin.com/in/sadik-tofik](https://linkedin.com/in/sadik-tofik-40788a31a)
 - 💻 GitHub: [github.com/sadik-tofik](https://github.com/sadik-tofik)
