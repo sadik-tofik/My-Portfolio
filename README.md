@@ -1,6 +1,6 @@
 # Sadik Tofik -  Portfolio Website
 
-[![Live Demo](https://img.shields.io/badge/View-Live%20Demo-2563eb?style=for-the-badge&logo=netlify&logoColor=white)](https://delicate-pothos-6198eb.netlify.app/)
+[![Live Demo](https://img.shields.io/badge/View-Live%20Demo-2563eb?style=for-the-badge&logo=netlify&logoColor=white)](https://sadik-tofik-portfolio.netlify.app/)
 
 A stunning, interactive portfolio website for Sadik Tofik, Full-Stack Developer & AI Enthusiast. Built with pure HTML5, CSS3, and vanilla JavaScript featuring advanced 3D animations, particle backgrounds, and responsive design.
 
@@ -145,7 +145,7 @@ portfolio/
 ## 🚀 Getting Started
 
 ### Option 1: View Live Demo
-Visit the deployed version: [https://delicate-pothos-6198eb.netlify.app/](https://delicate-pothos-6198eb.netlify.app/)
+Visit the deployed version: [https://delicate-pothos-6198eb.netlify.app/](https://sadik-tofik-portfolio.netlify.app/)
 
 ### Option 2: Run Locally
 1. **Clone the repository**
